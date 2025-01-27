@@ -3,6 +3,7 @@ import axios from 'axios';
 import { AtSign, User, LockKeyhole, Eye, EyeOff } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 function Register() {
 	const [showPassword, setShowPassword] = useState(false);
@@ -206,9 +207,9 @@ function Register() {
 					<div className="mt-4 text-center">
 						<p className="text-sm">
 							Sudah punya akun? Login{' '}
-							<a href="/login" className="font-bold text-primary">
+							<Link to="/login" className="font-bold text-primary">
 								di sini
-							</a>
+							</Link>
 						</p>
 					</div>
 				</div>
