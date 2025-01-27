@@ -5,9 +5,11 @@ import { AtSign, User } from 'lucide-react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const AccountData = () => {
 	const dispatch = useDispatch();
+	const navigate = useNavigate();
 	const profile = useSelector((state) => state.profile);
 
 	const [loading, setLoading] = useState(false);
@@ -57,8 +59,8 @@ const AccountData = () => {
 		localStorage.removeItem('authToken');
 		toast.info('Anda telah keluar!', { position: 'top-right' });
 		setTimeout(() => {
-			window.location.href = '/login';
-		}, 1000);
+			navigate('/');
+		}, 2000);
 	};
 
 	const getProfileImage = (profileImage) => {
