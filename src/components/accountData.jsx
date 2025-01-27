@@ -60,7 +60,7 @@ const AccountData = () => {
 		toast.info('Anda telah keluar!', { position: 'top-right' });
 		setTimeout(() => {
 			navigate('/');
-		}, 2000);
+		}, 1000);
 	};
 
 	const getProfileImage = (profileImage) => {
