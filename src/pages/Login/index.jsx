@@ -38,7 +38,7 @@ function Login() {
 
 			setTimeout(() => {
 				navigate('/');
-			}, 2000);
+			}, 1000);
 		} catch (err) {
 			toast.error(err.response.data.message, {
 				position: 'top-right',
