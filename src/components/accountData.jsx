@@ -59,7 +59,7 @@ const AccountData = () => {
 		localStorage.removeItem('authToken');
 		toast.info('Anda telah keluar!', { position: 'top-right' });
 		setTimeout(() => {
-			navigate('/');
+			navigate('/login');
 		}, 1000);
 	};
 
